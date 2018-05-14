@@ -66,12 +66,11 @@ class Commands {
     }
 
     private void africa(){
-      String bip = "bip.mp3";
-      Media hit = new Media(new File(bip).toURI().toString());
-      MediaPlayer mediaPlayer = new MediaPlayer(hit);
-      mediaPlayer.play();
+
+      Process p = Runtime.getRuntime().exec("python Africa.py");
+
     }
-    
+
     public static void displayBoardOptions(){
       String[] boards = displayIt(msgs);
       System.out.println("boards available to connect to :");
